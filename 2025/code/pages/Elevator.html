@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="PageStyle.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!--developing-->
+    <script type="text/javascript" src="https://livejs.com/live.js"></script>
+
+    <title>Elevator</title>
+</head>
+<body>
+    <h1>Elevator</h1>
+    <hr>
+    <div style="margin: 30px;">
+        <h2>事前準備</h2>
+        安裝程式包: REVLib
+        <pre><code class="java">
+    import com.revrobotics.RelativeEncoder; //SparkMax內建編碼器
+    import com.revrobotics.spark.SparkBase.PersistMode;//設定儲存模式 ------|用在
+    import com.revrobotics.spark.SparkBase.ResetMode;//設定重置模式---------|馬達的configuration裏面
+    import com.revrobotics.spark.SparkLowLevel.MotorType;//設定馬達類型(kBrushless, kBrushed)
+    import com.revrobotics.spark.SparkMax;//馬達本體
+    import com.revrobotics.spark.config.SparkBaseConfig.IdleMode;//設定閒置模式(kBrake急停, kCoast緩停)
+    import com.revrobotics.spark.config.SparkMaxConfig;//設定SparkMax
+
+    //跟底盤相關的東西
+    import edu.wpi.first.wpilibj2.command.Command;
+    import edu.wpi.first.wpilibj2.command.SubsystemBase;
+        </code></pre>
+    </div>
+
+    <div style="margin: 30px;">
+        <h2>程式本體</h2>
+        <pre><code class="java">
+    public class Elevator extends SubsystemBase{
+        public SparkMax elevator;//        |電梯的馬達
+        public SparkMaxConfig config;//    |馬達的配置器           定義各項物件
+        public RelativeEncoder encoder;//  |馬達的內建編碼器            
+
+        public Elevator(){
+            elevator = new SparkMax(0, MotorType.kBrushless);//實例化電梯馬達
+            
+            config = new SparkMaxConfig();//實例化馬達配置物件
+            config.idleMode(IdleMode.kBrake);//設定待機模式(急停)
+            elevator.configure(config, ResetMode.kResetSafeParameters,PersistMode.kPersistParameters);//使用設定的配置
+            
+            encoder = elevator.getEncoder();//實例化馬拿內建編碼器
+            encoder.setPosition(0);//將馬達目前的讀數Position = 0
+        }
+
+        public Command toggle(double speed){//DataType要用Command不然之後會很難用
+            //reverse true is up, false is down
+
+            return runOnce(() -> { //SubsystemBase內建的指令，單純就是背
+                elevator.set(speed);//設定馬速度(建議加乘數讓馬達的最大速度不要這麼快)
+                if(speed > 0) while(encoder.getPosition() != 1000) continue;
+                //如果速度>0(為正)，電梯就往上跑，當位置小於設定的數值(這邊是1000)，就讓馬達繼續跑
+                else while(encoder.getPosition() != 0) continue;
+                //如果為負，就是反轉
+
+                elevator.set(0);//把馬達停下來
+            });
+        }
+    }
+    </code></pre>
+    </div>
+
+</body>
+</html>
