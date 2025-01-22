@@ -46,3 +46,7 @@ span{
     justify-content: center;
     font-family: 'JetBrains Mono', monospace;
 }
+
+.level{
+    font-size: 15px;
+}
