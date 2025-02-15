@@ -1,0 +1,71 @@
+@import url(constants.css);
+
+button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+img{
+    width: 40px;
+}
+
+img:hover{
+    text-decoration: none;
+}
+
+span{
+    color: var(--TextColor);
+    font-size: 28px;
+}
+
+body{
+    width: 90%;
+}
+
+.header{
+    background-color: #4b4b4b;
+    width: 100vw;
+    height: 60px;
+    top: 0;
+    left: 0;
+    padding: none;
+    position: fixed;
+    display: flex;
+    align-items: center;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+}
+
+button{
+    color: var(--hyperlink);
+    font-size: 18px;
+}
+
+.box{
+    width: 20vw;
+    height: 20vw;
+    border: 1px solid white;
+    border-radius: 25px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image{
+    width: 16vw;
+}
+
+.copyright{
+    position: fixed;
+    text-decoration: none;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}

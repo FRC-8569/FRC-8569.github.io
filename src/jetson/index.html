@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jetson Reset</title>
+</head>
+<body>
+    <div style="line-height: 15px;">
+        <h1 class="center">How to reset the Jetson Orin Nano booting SSD</h1>
+        <p class="center">by <a href="https://github.com/justmore5mins">Justmore5mins</a></p>
+    </div>
+    <hr>
+    <h2 class="center">Preparing For the Resetting</h2>
+    <div class="needed">
+        <p class="center">Everything you need</p>
+        <ul>
+            <li>Jetson Orin Nano</li>
+            <li>SSD</li>
+            <li>ubuntu computer</li>
+            <li>jumper</li>
+            <li>USB C cable</li>
+            <li>Power Supply</li>
+            <li><abbr title="DisplayPort">DP</abbr> wire (not required)</li>
+            <a href="https://developer.nvidia.com/sdk-manager"><li>SDK Manager(software)</li></a>
+        </ul>
+    </div>
+    <h2>The way to download the software</h2>
+    <p style="margin-left: 50px;">Go the website and choose the choice which fits you (here is .deb ubuntu) and follows the instructions of the website and done!</p>
+    <h2>Don't forget to...</h2>
+    <p style="margin-left: 50px;">use a jumper to connect pin 9 and 10 at <a href="../../images/DeviceImage.png">J14</a> (start from RIGHT)</p>
+    <p style="margin-left: 50px;">connect Jetson Nano to computer by USB C port at J5</p>
+    <hr>
+    <h2 class="center">Let's Started</h2>
+    <p>1. Open the SDK manager and login to you NVIDIA developer account</p>
+    <p>2. Choose Jetson from the top instead Data Science, it will choose the device automatically if detected</p>
+    <p>3. In the next page, you can install the additional software like CUDA and TensorRT, after choosing, click the next step to start installation</p>
+    <p>4. then you can take a nap for waiting it. (it will pop up some configuration page while installation)</p>
+    <p>✅  after the installation, you're reset the Jetson Orin Nano successfully</p>
+</body>
+</html>

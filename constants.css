@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+:root{
+    --BgColor: #232323;
+    --TextColor: whitesmoke;
+    --font: "Jetbrains Mono";
+    --hyperlink: #b1faff;
+}
+
+.center{
+    text-align: center;
+}
+
+body{
+    background-color: var(--BgColor);
+    color: var(--TextColor);
+    font-family: var(--font), sans-serif;
+    line-height: 25px;
+    margin-top: 20px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+a:link, a:visited{
+    color: var(--hyperlink);
+}
+
+p{
+    font-size: 18px;
+    margin-left: 50px;
+}
+
