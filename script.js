@@ -1,5 +1,5 @@
 function home(){
-    location.href = `${location.host}/index.html`
+    location.href = `http://${location.host}`
 }
 
 function direct(to){

@@ -23,6 +23,7 @@ body{
 
 a:link, a:visited{
     color: var(--hyperlink);
+    text-decoration: none;
 }
 
 p{
