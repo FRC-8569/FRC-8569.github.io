@@ -23,6 +23,10 @@ body{
     width: 90%;
 }
 
+location{
+    color: var(--hyperlink);
+}
+
 .header{
     background-color: #4b4b4b;
     width: 100vw;
@@ -38,11 +42,6 @@ body{
 .home{
     display: flex;
     align-items: center;
-}
-
-button{
-    color: var(--hyperlink);
-    font-size: 18px;
 }
 
 .box{
@@ -68,4 +67,9 @@ button{
     bottom: 0;
     width: 100%;
     text-align: center;
+}
+
+.files{
+    width: 30vw;
+    border: 1px solid white;
 }

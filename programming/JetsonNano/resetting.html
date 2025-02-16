@@ -2,15 +2,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Jetson Reset</title>
+    <style>
+        @import url(../../constants.css);
+        @import url(../../style.css);
+        .needed{
+            font-size: 20px;
+            width: 40vh;
+            border: 1px #fff solid;
+            background-color: #4b4b4b;
+        }
+    </style>
+    <script src="../../script.js"></script>
+    <script src="../../error.js"></script>
 </head>
 <body>
-    <div style="line-height: 15px;">
-        <h1 class="center">How to reset the Jetson Orin Nano booting SSD</h1>
-        <p class="center">by <a href="https://github.com/justmore5mins">Justmore5mins</a></p>
-    </div>
-    <hr>
+    <div class="header" style="flex: 1">
+        <button onclick="home()" class="home">
+          <img src="../../images/HomeIcon.svg" alt=""/><span style="margin-left: 10px; display: flex; flex-direction: row;">FRC8569工程筆記——Resetting Jetson Orin Nano <div style="font-size: 15px; margin: 13px 0 0 5px;">from <a href="https://github.com/justmore5mins">Justmore5mins</a></div></span>
+        </button>
+      </div>
+      <h1 style="height: 10px"></h1>
+      <location>home>programming>Jetson Nano>Resetting</location>
+      <hr style="color: transparent; height: 10px;">
     <h2 class="center">Preparing For the Resetting</h2>
     <div class="needed">
         <p class="center">Everything you need</p>
@@ -28,7 +42,7 @@
     <h2>The way to download the software</h2>
     <p style="margin-left: 50px;">Go the website and choose the choice which fits you (here is .deb ubuntu) and follows the instructions of the website and done!</p>
     <h2>Don't forget to...</h2>
-    <p style="margin-left: 50px;">use a jumper to connect pin 9 and 10 at <a href="../../images/DeviceImage.png">J14</a> (start from RIGHT)</p>
+    <p style="margin-left: 50px;">use a jumper to connect pin 9 and 10 at <a href="../../images/DeviceImage.png">J14</a> (SYS RST and GND)</p>
     <p style="margin-left: 50px;">connect Jetson Nano to computer by USB C port at J5</p>
     <hr>
     <h2 class="center">Let's Started</h2>
