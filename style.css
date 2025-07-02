@@ -1,189 +1,132 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  font-family: "Ubuntu", sans-serif;
-  background-color: #272626;
-  color: white;
-  overflow-x: hidden;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Ubuntu", sans-serif;
+    background-color: #272626;
+    color: white;
+    overflow-x: hidden;
+    font-size: 2.5vh;
 }
 
 /* 頂欄 */
 #TopBar {
-  background-color: #ffce3a;
-  color: black;
-  position: fixed;
-  height: 8dvh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  z-index: 1000;
-  padding-left: 1vw;
+    background-color: #ffce3a;
+    color: black;
+    position: fixed;
+    height: 8dvh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    padding-left: 1vw;
 }
 
 /* 主標題區 */
 #MainTitle {
-  position: relative;
-  height: 70vh;
-  overflow: hidden;
+    position: relative;
+    height: 70vh;
 }
 
 .BackgroundVideo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.5;
-  z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    z-index: 1;
 }
 
 #MainTitleText {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  transform: translateY(-50%);
-  color: white;
-  z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 10;
 }
 
 #MainTitleText h1 {
-  font-size: 7vh;
-  margin: 0;
+    font-size: 7vh;
+    margin: 0;
 }
 
 #MainTitleText span {
-  font-size: 4vh;
-  display: block;
+    font-size: 4vh;
+    display: block;
 }
 
 #DrawDown {
-  position: absolute;
-  bottom: 1.5vh;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  font-size: 2vh;
-  color: lightgray;
-  opacity: 0.8;
-  z-index: 10;
+    position: absolute;
+    bottom: 1.5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 2vh;
+    color: lightgray;
+    opacity: 0.8;
+    z-index: 10;
 }
 
 /* 內容標題 */
 #ContentTitle {
-  text-align: center;
-  font-size: 5dvh;
-  font-weight: 300;
-  margin-top: 3vh;
+    text-align: center;
+    font-size: 5dvh;
+    font-weight: 300;
+    margin-top: 3vh;
+    margin-bottom: 0;
 }
 
-/* FRC內容區塊 */
-.frc-section {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 3vh;
-  padding: 5vh 5vw;
-  box-sizing: border-box;
-  flex-wrap: wrap;
-  align-items: flex-start;
+#WhatIsFRC {
+    position: relative;
+    display: flex;
+    width: 98dvw;
+    gap: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* 強制順序：左文字右影片 */
-.frc-text-box {
-  flex: 0 0 48%;
-  background-color: rgba(255,255,255,0.05);
-  padding: 3vh 3vw;
-  border-radius: 5px;
-  box-shadow: rgba(255, 255, 255, 0.048);
-  font-size: 2.5vh;
-  line-height: 1.6;
-  box-sizing: border-box;
-  min-width: 200px;
+#WhatIsFRC #contents {
+    border: 3px solid #ffffff3e;
+    border-radius: 10px;
+    height: 50dvh;
+    flex: 1;
+    width: 50%;
 }
 
-.frc-video-box {
-  flex: 0 0 48%;
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  border-radius: 5px;
-  min-width: 350px;
-}
-
-.frc-video-box iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: none;
-  border-radius: 5px;
-}
-
-/* 手機版：上下排列 */
-@media (max-width: 768px) {
-  .frc-section {
+#WhatIsFRC #SlideVideos {
+    position: relative;
+    border-radius: 15px;
+    width: 50%;
+    display: flex;
     flex-direction: column;
-  }
-
-  .frc-text-box {
-  flex: 0 0 48%;
-  background-color: rgba(255,255,255,0.05);
-  padding: 3vh 3vw;
-  border-radius: 5px;
-  box-shadow: rgba(255, 255, 255, 0.048);
-  font-size: 2.5vh;
-  line-height: 1.6;
-  box-sizing: border-box;
-  min-width: 350px;
 }
 
-.frc-video-box {
-  flex: 0 0 48%;
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  border-radius: 5px;
-  min-width: 350px;
+#WhatIsFRC #SlideVideos iframe {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    aspect-ratio: 4/3;
+
 }
 
-.frc-video-box iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: none;
-  border-radius: 5px;
-}
-
-  #TopBar h1 {
-    font-size: 3.5dvh;
-  }
-
-  #MainTitleText h1 {
-    font-size: 5vh;
-  }
-
-  #MainTitleText span {
-    font-size: 3vh;
-  }
-}
-
-
-a{
+a {
     text-decoration: none;
     color: aqua;
-    
+
 }
-a:visited{
+
+a:visited {
     color: aquamarine;
+}
+
+p{
+    font-size: 2.37vh;
+    margin-top: 5px;
 }

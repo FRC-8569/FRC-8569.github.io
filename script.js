@@ -1,9 +1,9 @@
-import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
 
-// 初始化 smooth scroll
-const scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 800
-});
+const ImaageSlide = new Siema({
+    selector: "#SlideVideos",
+    duration: 200,
+    perPage: 1,
+  })
 
 window.onload = function () {
   // 打字機效果
@@ -12,19 +12,19 @@ window.onload = function () {
     typeSpeed: 85,
     backSpeed: 70,
     backDelay: 1000,
-    loop: true
+    loop: true,
+    showCursor: false
   });
 
-  // Swiper輪播（目前頁面沒啟用，預留）
-  const swiper = new Swiper('.swiper', {
-    direction: 'horizontal',
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
+  new SmoothScroll('a[href*="#"]', {
+    speed: 2000
   });
 };
+
+function goNext(){
+ ImaageSlide.next()
+}
+
+function goBack(){
+  ImaageSlide.prev()
+}

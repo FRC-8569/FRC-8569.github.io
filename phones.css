@@ -1,0 +1,52 @@
+@media (max-width: 768px) {
+    #WhatIsFRC {
+        flex-direction: column;
+        align-items: center;
+        /* 新增這行讓子元素置中 */
+        text-align: center;
+        /* 可選：文字置中 */
+    }
+
+    #WhatIsFRC #contents {
+        flex: 0 0 48%;
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 3vh 3vw;
+        border-radius: 20px;
+        box-shadow: rgba(255, 255, 255, 0.048);
+        font-size: 2.5vh;
+        line-height: 1.6;
+        box-sizing: border-box;
+        min-width: 350px;
+    }
+
+    #WhatIsFRC #videos {
+        flex: 0 0 48%;
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        border-radius: 15px;
+        min-width: 350px;
+    }
+
+    #WhatIsFRC #videos iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: none;
+        border-radius: 5px;
+    }
+
+    #MainTitleText h1 {
+        font-size: 5vh;
+    }
+
+    #MainTitleText span {
+        font-size: 3vh;
+    }
+
+
+}

@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
   <meta charset="utf-8" />
   <title>FRC 8569 | 中和高中FRC</title>
   <meta name="author" content="Justmore5mins from FRC8569" />
   <meta name="description" content="FRC8569的官方隊網" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="/style.css" />
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.polyfills.min.js"></script>
-  <script src="./script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/siema@1.5.1/dist/siema.min.js"></script>
+  <script src="/script.js" defer></script>
 </head>
+
 <body>
   <div id="TopBar">
     <button onclick="window.location='/'" style="border-radius: 5px; border: none;">
-      <img src="https://images.squarespace-cdn.com/content/v1/5a7d2786ccc5c506629e337b/1641996345867-ALF8LBNRYVFW6S8KV1TB/first-horz-rgb.png"
+      <img
+        src="https://images.squarespace-cdn.com/content/v1/5a7d2786ccc5c506629e337b/1641996345867-ALF8LBNRYVFW6S8KV1TB/first-horz-rgb.png"
         alt="FRC8569" style="width: 22vh; left: 2px;">
     </button>
     <h1>中和高中 | FRC8569</h1>
@@ -23,8 +27,8 @@
   <div id="MainTitle">
     <img src="./static/2024frc8569.svg" alt="背景圖" class="BackgroundVideo" />
     <div id="MainTitleText">
-      <h1 id="BigTitleLooping"></h1>
-      <span>不只是做機器人</span>
+      <h1 id="BigTitleLooping" style="width: 100dvw;"></h1>
+      <span>不只是機器人</span>
     </div>
     <a href="#ContentTitle" id="DrawDown">
       記得往下滑<br>
@@ -34,30 +38,44 @@
 
   <h1 id="ContentTitle">FRC是什麼</h1>
 
-  <div class="frc-section">
-    <div class="frc-text-box">
-      <p>
-        <a href="https://www.firstinspires.org/robotics/frc"></a>FRC (FIRST Robotics Competition) 是由非營利組織 FIRST 所舉辦，主要對高中生開放的國際級賽事。
+  <div id="WhatIsFRC">
+    <div id="contents">
+      <p style="padding-left: 2dvw; padding-right: 2dvw;">
+        <a href="https://www.firstinspires.org/robotics/frc">FRC (FIRST Robotics Competition)</a> 是由非營利組織 FIRST
+        所舉辦，主要對高中生開放的國際級賽事。
         除了 FRC，還有規模較小的
         <a href="https://www.firstinspires.org/robotics/ftc">FTC (FIRST Tech Challenge)</a>，
         以及以樂高為主的
         <a href="https://www.firstlegoleague.org">FLL (FIRST Lego League)</a>。
         每年一月初公布賽題，三月初展開為期七週的比賽。
-        在這段時間內，學生需團隊合作設計與製作機器人，結合創意與工程技能。比賽中，機器人必須完成各種挑戰任務，例如：2025 年的 ReefScape 要將水管送至高處，2024 年 Crescendo 則需投擲環狀道具。
-FRC 不僅強調機械設計與程式編寫，更重視團隊協作、策略規劃與創新思維。參賽隊伍通常包含工程師、程式設計師、設計師和策略規劃師等多種角色，從方案構思到機器製作，每一步都需要密切合作。賽季中隊伍還會參加區域賽與全國賽，與來自世界各地的隊伍切磋技術與交流經驗。
-除了比賽，FIRST 也鼓勵學生發展領導力與溝通能力，並藉由社群服務與公關活動，提升對科技的熱情與影響力。FRC 的經驗不僅是參賽，更是一場讓高中生實際體驗工程師工作環境、磨練問題解決能力的難得旅程，對未來升學及職涯都有巨大幫助。
+        在這段時間內，學生需團隊合作設計與製作機器人，結合創意與工程技能。比賽中，機器人必須完成各種挑戰任務，例如2025 年的 ReefScape 要將水管送至高處，2024 年 Crescendo 則需投擲環狀道具。FRC
+        不僅強調機械設計與程式編寫及機電整合，更重視團隊協作、策略規劃與創新思維。參賽隊伍大多皆為高中生，來自世界各地約5000餘支隊伍。從方案構思到機器製作，每一步都需要密切合作。賽季中隊伍還會參加區域賽與全國賽，與來自世界各地的隊伍切磋技術與交流經驗。除了比賽，FIRST
+        也鼓勵學生發展領導力與溝通能力，並藉由社群服務與公關活動，提升對科技的熱情與影響力。FRC 的經驗不僅是參賽，更是一場讓高中生實際體驗磨練解決問題能力的難得旅程，對未來升學及職涯都有巨大幫助。
       </p>
     </div>
 
-    <div class="frc-video-box">
-      <iframe 
-        src="https://www.youtube.com/embed/YWbxcjlY9JY?si=fdFrukEvPdskVw9t" 
-        title="FRC 2025 Kickoff"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
+    <div id="SlideVideos">
+      <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/YWbxcjlY9JY?si=jTiKW-8dad5oP91u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <p style="text-align: center; display: block; color: white;">2025 Kickoff<button onclick="goNext()" style="display: inline; border: none; background: transparent; color: white; font-size: 3.5dvh;">&gt;</button></p>
+      
+     </div>
+     <div>
+       <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vZot9cgPKjI?si=14g19R7Lr_TVYBeb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <p style="text-align: center; display: block; color: white;"><button onclick="goBack()" style="display: inline; border: none; background: transparent; color: white; font-size: 3.5dvh;">&lt;</button>世界賽影片</p>
+      
+     </div>
+     <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/xYYWUSlSINk?si=E-ERZvlc4v_cGxNx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <p style="text-align: center; display: block; color: white;">(什麼都沒看到)惡搞版Kickoff</p>
+     </div>
     </div>
+
   </div>
+
+
+  <p style="text-align: center; color: lightgray; font-size: 2.5vh;">&copy; 2025 Justmore5mins from FRC8569 Zenith
+    Polaris</p>
 </body>
+
 </html>
