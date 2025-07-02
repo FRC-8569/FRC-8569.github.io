@@ -132,11 +132,38 @@ html, body {
     flex-direction: column;
   }
 
-  .frc-text-box,
-  .frc-video-box {
-    flex: 1 1 100%;
-    order: unset;
-  }
+  .frc-text-box {
+  flex: 0 0 48%;
+  background-color: rgba(255,255,255,0.05);
+  padding: 3vh 3vw;
+  border-radius: 5px;
+  box-shadow: rgba(255, 255, 255, 0.048);
+  font-size: 2.5vh;
+  line-height: 1.6;
+  box-sizing: border-box;
+  min-width: 350px;
+}
+
+.frc-video-box {
+  flex: 0 0 48%;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  min-width: 350px;
+}
+
+.frc-video-box iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: ;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  border-radius: 5px;
+}
 
   #TopBar h1 {
     font-size: 3.5dvh;
