@@ -2,9 +2,7 @@
     #WhatIsFRC {
         flex-direction: column;
         align-items: center;
-        /* 新增這行讓子元素置中 */
         text-align: center;
-        /* 可選：文字置中 */
     }
 
     #WhatIsFRC #contents {

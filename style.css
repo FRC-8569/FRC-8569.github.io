@@ -89,13 +89,18 @@ body {
     transform: translateX(-50%);
 }
 
-/* 強制順序：左文字右影片 */
-#WhatIsFRC #contents {
+#contents {
     border: 3px solid #ffffff3e;
     border-radius: 10px;
-    height: 50dvh;
     flex: 1;
     width: 50%;
+}
+
+#contents p{
+    padding-left: 2dvw;
+    padding-right: 2dvw;
+    font-size: 2.37vh;
+    margin-top: 5px;
 }
 
 #WhatIsFRC #SlideVideos {
@@ -124,9 +129,4 @@ a {
 
 a:visited {
     color: aquamarine;
-}
-
-p{
-    font-size: 2.37vh;
-    margin-top: 5px;
 }
