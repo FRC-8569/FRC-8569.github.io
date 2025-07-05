@@ -1,9 +1,3 @@
-const ImaageSlide = new Siema({
-  selector: "#SlideVideos",
-  duration: 100,
-  perPage: 1,
-});
-
 function checkAndRedirect() {
   if (window.innerWidth <= 768) {
     location.href = "/mobile";
@@ -29,6 +23,18 @@ window.onload = function () {
   new SmoothScroll('a[href*="#"]', {
     speed: 2000
   });
+
+   new Siema({
+  selector: "#SlideVideos",
+  duration: 100,
+  perPage: 1,
+});
+
+new Siema({
+  selector: "#GroupIntro",
+  duration: 100,
+  perPage: 4
+})
 };
 
 // ⭐ 動態偵測視窗變化

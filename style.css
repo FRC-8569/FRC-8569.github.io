@@ -27,6 +27,12 @@ body {
 #MainTitle {
     position: relative;
     height: 92dvh;
+    padding-top: 8dvh;
+    overflow: hidden;
+    background-image: url("/static/2024frc8569.svg");
+    background-size: 100%; 
+    background-size: 100%;
+    background-blend-mode: normal;
 }
 
 .BackgroundVideo {
@@ -71,7 +77,6 @@ body {
     margin-bottom: 0;
     bottom: 0;
     z-index: 10;
-    
 }
 
 /* 內容標題 */
@@ -120,7 +125,43 @@ body {
     border: none;
     border-radius: 15px;
     aspect-ratio: 2;
+}
 
+#GroupIntro {
+    display: flex;
+    flex-direction: column;
+    width: 98dvw;
+}
+
+#GroupIntro #group{
+display: flex;
+flex-direction: column;
+height: 80dvh;
+width: 23dvw;
+gap: 20px;
+border: 2px solid white;
+border-radius: 5px;
+align-items: center;
+}
+
+#GroupIntro #group h2{
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+#GroupIntro p{
+    margin: 0;
+    margin-top: 0;
+}
+
+#GroupIntro #group img{
+    max-width: 100%;
+    object-fit: contain;
+    height: auto;
+    display: flex;
+    position: absolute;
+    align-items: baseline;
 }
 
 a {
