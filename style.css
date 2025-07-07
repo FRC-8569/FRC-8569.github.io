@@ -97,6 +97,14 @@ body {
     transform: translateX(-50%);
 }
 
+#ContentBlock img{
+    position: relative;
+    width: 50%;
+    border: none;
+    border-radius: 15px;
+    aspect-ratio: 2;
+}
+
 #contents {
     border: 3px solid #ffffff3e;
     border-radius: 10px;
