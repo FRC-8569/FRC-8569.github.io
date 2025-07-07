@@ -129,19 +129,26 @@ body {
 
 #GroupIntro {
     display: flex;
-    flex-direction: column;
-    width: 98dvw;
+    justify-content: center;
+    gap: 20px;
+    max-width: 96%;
+    margin: 0 auto;
+    padding: 30px 20px;
+    box-sizing: border-box;
 }
+
 
 #GroupIntro #group{
 display: flex;
 flex-direction: column;
 height: 80dvh;
-width: 23dvw;
+width: 22dvw;
 gap: 20px;
 border: 2px solid white;
 border-radius: 5px;
 align-items: center;
+padding: 20px;
+box-sizing: border-box;
 }
 
 #GroupIntro #group h2{
@@ -156,12 +163,11 @@ align-items: center;
 }
 
 #GroupIntro #group img{
-    max-width: 100%;
-    object-fit: contain;
+    max-width: 92%;
     height: auto;
-    display: flex;
-    position: absolute;
-    align-items: baseline;
+    margin: 10px auto;
+    display: block;
+     border-radius: 12px;
 }
 
 a {

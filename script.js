@@ -1,7 +1,7 @@
 function checkAndRedirect() {
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 500 && location.pathname == "/") {
     location.href = "/mobile";
-  } else if (location.href == location.hostname+"/mobile") {
+  }if (window.innerWidth > 500 && location.pathname == "/mobile") {
     location.href = "/";
   }
 }
