@@ -100,9 +100,10 @@ body {
 #ContentBlock img{
     position: relative;
     width: 50%;
+    height: auto;
+    object-fit: scale-down;
     border: none;
-    border-radius: 15px;
-    aspect-ratio: 2;
+    border-radius: 2vh;
 }
 
 #contents {
@@ -149,7 +150,7 @@ body {
 #GroupIntro #group{
 display: flex;
 flex-direction: column;
-height: 80dvh;
+height: 94dvh;/*80dvh*/
 width: 22dvw;
 gap: 20px;
 border: 2px solid white;
@@ -172,7 +173,7 @@ box-sizing: border-box;
 
 #GroupIntro #group img{
     max-width: 92%;
-    height: auto;
+    height: 38dvh;
     margin: 10px auto;
     display: block;
      border-radius: 12px;
@@ -187,3 +188,91 @@ a {
 a:visited {
     color: aquamarine;
 }
+
+
+
+
+
+
+
+
+
+
+/*滾動*/
+.scroll-text {
+  position: relative;
+  height: 400px;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0); /* 黑底半透明 */
+  color: #ffffff;
+  padding-right: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #666 transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+  padding-bottom: 10%;
+
+  /* 加上霧玻璃效果 */
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, white 48%, white 52%, transparent 100%);
+  mask-image: linear-gradient(to top, transparent 0%, white 48%, white 52%, transparent 100%);
+
+  border-left: none;             /* 拿掉左邊框 */
+  box-shadow: none;              /* 拿掉可能造成邊的陰影 */
+  padding-left: 10px;            /* 增加內距，避免文字靠邊貼 */
+  margin-left: 0;                /* 避免多餘偏移 */
+}
+
+.scroll-text::-webkit-scrollbar {
+  width: 12px;
+}
+
+.scroll-text::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 4px;
+}
+
+.scroll-text .fade-in-out {
+  position: static;
+  width: auto;
+  opacity: 1;
+  transition: none;
+  will-change: auto;
+}
+
+.ul{
+    padding-left: 35%;
+}
+
+
+.poem-container {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0);
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, white 48%, white 52%, transparent 100%);
+  mask-image: linear-gradient(to top, transparent 0%, white 48%, white 52%, transparent 100%);
+}
+
+
+.poem-text {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 3vh;
+  line-height: 2.5;
+  animation: scrollUpPoem 45s linear forwards;
+  animation-play-state: paused;
+  
+}
+
+@keyframes scrollUpPoem {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: -750%;
+  }
+}
+
