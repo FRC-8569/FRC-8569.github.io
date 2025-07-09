@@ -173,7 +173,7 @@ box-sizing: border-box;
 
 #GroupIntro #group img{
     max-width: 92%;
-    height: 38dvh;
+    height: 36dvh;/*auto*/
     margin: 10px auto;
     display: block;
      border-radius: 12px;
