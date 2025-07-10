@@ -1,97 +1,160 @@
 body {
   margin: 0;
-  padding: 0;
-  background-color: #272626;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 2.5vh;
+  font-family: "Noto Sans TC", sans-serif;
+  background-color: #111;
   color: white;
-}
-
-#TopBar {
-  display: flex;
-  align-items: center;
-  gap: 1vw;
-  background-color: #ffce3a;
-  color: black;
-  padding: 1vh 2vw;
-}
-
-#MainTitle {
-  position: relative;
-  height: 40vh;
   text-align: center;
 }
 
-.BackgroundVideo {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  opacity: 0.4;
-  z-index: 1;
-}
-
-#MainTitleText {
-  position: relative;
-  z-index: 2;
-  padding-top: 10vh;
-}
-
-#MainTitleText h1 {
-  font-size: 5vh;
-}
-
-#MainTitleText span {
-  font-size: 3vh;
+#logo {
+  width: 70%;
+  margin: 5vh auto 2vh;
   display: block;
 }
 
-#DrawDown {
-  display: block;
-  font-size: 2vh;
+.subtitle {
+  text-align: center;
   color: lightgray;
-  padding-top: 2vh;
+  margin-bottom: 2vh;
 }
 
-#ContentTitle {
+h1 {
+  font-size: 12vw;
+  margin: 2vh 0;
+}
+
+h2 {
+  font-size: 6.6vw;
+  margin: 2vh 0;
+  font-weight: 500;
   text-align: center;
-  margin-top: 6vh;
-  font-size: 4vh;
+  color: rgb(255, 255, 255);
 }
 
-#WhatIsFRC {
-  padding: 3vh 5vw;
-}
-
-#contents {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 2vh 3vw;
-  border-radius: 15px;
-}
-
-#SlideVideos {
-  margin-top: 4vh;
-}
-
-#SlideVideos div {
-  margin-bottom: 4vh;
-}
-
-#SlideVideos iframe {
-  width: 100%;
-  aspect-ratio: 16/9;
-  border-radius: 12px;
-  border: none;
-}
-
-#SlideVideos p {
+h3 {
+  font-size: 5.8vw;
+  margin: 1.5vh 0 1vh;
+  font-weight: 500;
+  color: #ffffff;
   text-align: center;
+}
+
+p {
+  font-size: 4.8vw;
+  line-height: 1.7;
   margin: 1vh 0;
+  color: #f0f0f0;
+  text-align: left;
 }
 
-button {
-  font-size: 3vh;
-  background: none;
-  border: none;
+.section {
+  padding: 5vh 6vw;
+  text-align: left;
+}
+
+a.button {
+  display: inline-block;
+  margin-top: 4vh;
+  padding: 1.5vh 4vw;
+  background-color: #00bcd4;
   color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 4vw;
+}
+
+iframe {
+  width: 90vw;
+  height: 50vw;
+  margin: 4vh auto;
+  border: none;
+  display: block;
+  border-radius: 10px;
+}
+
+.video-caption {
+  font-size: 3.5vw;
+  color: gray;
+  text-align: center;
+  margin-top: -2vh;
+}
+
+.group {
+  margin-bottom: 6vh;
+  text-align: center;
+}
+
+.group img {
+  width: 80%;
+  height: auto;
+  margin-top: 2vh;
+  border-radius: 12px;
+}
+
+.quote {
+  text-align: center;
+  font-style: italic;
+  color: lightgray;
+  font-size: 4.25vw;
+  margin-top: 1.5vh;
+}
+
+.footer {
+  font-size: 3vw;
+  color: gray;
+  margin-top: 10vh;
+}
+
+
+
+/*滾動*/
+.scroll-text {
+  position: relative;
+  height: 375px;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0); /* 黑底半透明 */
+  color: #ffffff;
+  padding-right: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #666 transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+  padding-bottom: 10%;
+
+  /* 加上霧玻璃效果 */
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, white 46%, white 54%, transparent 100%);
+  mask-image: linear-gradient(to top, transparent 0%, white 46%, white 54%, transparent 100%);
+
+  border-left: none;             /* 拿掉左邊框 */
+  box-shadow: none;              /* 拿掉可能造成邊的陰影 */
+  padding-left: 10px;            /* 增加內距，避免文字靠邊貼 */
+  margin-left: 0;                /* 避免多餘偏移 */
+}
+
+.scroll-text::-webkit-scrollbar {
+  width: 12px;
+}
+
+.scroll-text::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 4px;
+}
+
+.poem-word-size {
+  font-size: 4.2vw;
+  line-height: 1.7;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+.scroll-text .fade-in-out {
+  position: static;
+  width: auto;
+  opacity: 1;
+  transition: none;
+  will-change: auto;
+}
+
+.ul{
+    padding-left: 4%;
 }
