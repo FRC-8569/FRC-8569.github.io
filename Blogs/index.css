@@ -1,0 +1,33 @@
+#BlogList {
+  margin: 15vh auto 4vh auto;  /* 頂部留 15vh 空間 */
+  width: 90vw;
+  max-height: 85vh;
+  padding: 2vh 3vw;
+  
+  color: white;
+  font-size: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 1vw;
+  position: relative;
+  z-index: 2000;
+}
+
+#BlogList h1 {
+  font-size: 2rem;
+  margin-bottom: 3dvh;
+  margin-top: 3dvh;
+  margin-left: 8dvh;
+}
+
+#BlogList hr{
+  height: 2px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* INFO: General*/
+
+a{
+    color: white;
+    text-decoration: none;
+}

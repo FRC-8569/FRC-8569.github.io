@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>FRC 8569 | 有趣的文章</title>
+  <meta name="author" content="Justmore5mins from FRC8569" />
+  <meta name="description" content="FRC8569的官方隊網" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/frame.css" />
+  <link rel="stylesheet" href="blogs.css" />
+
+</head>
+
+<body>
+  <div id="TopBar">
+    <img src="/static/TeamIconWhite.png" alt="FRC8569"
+      style="width: 10vh;background-color: #3e85e4;border: 1px solid #3e85e4; left: 2px;">
+    <h1>FRC8569 | 有趣的文章</h1>
+    <div style="right: 0px;">
+      <a href="/Blogs/">
+        <img src="static/Left.svg" alt="" style="height: 6dvh;">
+      </a>
+      <a href="/">
+        <img src="static/Home.svg" alt="" style="height: 5dvh;">
+      </a>
+    </div>
+  </div>
+  <div class="intresting">
+    <h1>有趣的文章</h1>
+    <p>
+      我們對愛並不陌生 你知道規則，我也知道 我所想的是完全的承諾 你不會從其他人那裡得到這個<br>
+      We're no strangers to love You know the rules and so do I A full commitment's what I'm thinkin' of You wouldn't
+      get this from any other guy<br><br>
+      我只是想告訴你我的感受 一定要讓你明白<br>
+      I just wanna tell you how I'm feeling Gotta make you understand<br><br>
+      永遠不會放棄你，永遠不會讓你失望 永遠不會到處亂跑拋棄你 永遠不會讓你哭泣，永遠不會說再見 永遠不會說謊傷害你<br>
+      Never gonna give you up, never gonna let you down Never gonna run around and desert you Never gonna make you cry,
+      never gonna say goodbye Never gonna tell a lie and hurt you<br><br>
+      我們認識這麼久了 你的心一直在痛，但你卻羞於說出來 我們都知道裡面發生了什麼 我們了解這個遊戲並且我們會玩它<br>
+      We've known each other for so long Your heart's been aching, but you're too shy to say it Inside, we both know
+      what's been going on We know the game and we're gonna play it<br><br>
+      如果你問我感覺如何 別告訴我你太瞎了，看不見<br>
+      And if you ask me how I'm feeling Don't tell me you're too blind to see<br><br>
+      永遠不會放棄你，永遠不會讓你失望 永遠不會到處亂跑拋棄你 永遠不會讓你哭泣，永遠不會說再見 永遠不會說謊傷害你<br>
+      Never gonna give you up, never gonna let you down Never gonna run around and desert you Never gonna make you cry,
+      never gonna say goodbye Never gonna tell a lie and hurt you<br><br>
+      永遠不會放棄你，永遠不會讓你失望 永遠不會到處亂跑拋棄你 永遠不會讓你哭泣，永遠不會說再見 永遠不會說謊傷害你<br>
+      Never gonna give you up, never gonna let you down Never gonna run around and desert you Never gonna make you cry,
+      never gonna say goodbye Never gonna tell a lie and hurt you<br><br>
+      我們認識這麼久了 你的心一直在痛，但你卻羞於說出來 我們都知道裡面發生了什麼 我們了解這個遊戲並且我們會玩它<br>
+      We've known each other for so long Your heart's been aching, but you're too shy to say it Inside, we both know
+      what's been going on We know the game and we're gonna play it<br><br>
+      我只是想告訴你我的感受 一定要讓你明白<br>
+      I just wanna tell you how I'm feeling Gotta make you understand<br><br>
+      永遠不會放棄你，永遠不會讓你失望 永遠不會到處亂跑拋棄你 永遠不會讓你哭泣，永遠不會說再見 永遠不會說謊傷害你<br>
+      Never gonna give you up, never gonna let you down Never gonna run around and desert you Never gonna make you cry,
+      never gonna say goodbye Never gonna tell a lie and hurt you<br><br>
+      永遠不會放棄你，永遠不會讓你失望 永遠不會到處亂跑拋棄你 永遠不會讓你哭泣，永遠不會說再見 永遠不會說謊傷害你<br>
+      Never gonna give you up, never gonna let you down Never gonna run around and desert you Never gonna make you cry,
+      never gonna say goodbye Never gonna tell a lie and hurt you<br><br>
+      永遠不會放棄你，永遠不會讓你失望 永遠不會到處亂跑拋棄你 永遠不會讓你哭泣，永遠不會說再見 永遠不會說謊傷害你<br>
+      Never gonna give you up, never gonna let you down Never gonna run around and desert you Never gonna make you cry,
+      never gonna say goodbye Never gonna tell a lie and hurt you<br><br>
+    </p>
+    <p>
+      來源： Musixmatch<br>
+      作詞/作曲：Peter Alan Waterman / Matthew James Aitken / Michael Stock<br>
+      《Never Gonna Give You Up》歌詞 © Sids Songs Ltd., Mike Stock Publishing Limited, Pw Ballads<br>
+    </p>
+  </div>
+
+  <!-- 隱藏 YouTube 音樂播放器 -->
+  <div id="bg-music-container" style="position: fixed; bottom: 0; left: 0; width: 1px; height: 1px; z-index: -999;">
+    <iframe id="ytplayer" width="1" height="1"
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&autoplay=0&loop=1&playlist=dQw4w9WgXcQ"
+      frameborder="0" allow="autoplay" allowfullscreen></iframe>
+  </div>
+
+  <!-- 播放腳本 -->
+  <script>
+    let player;
+    let interacted = false;
+
+    // 播放音樂（只執行一次）
+    function tryPlay() {
+      if (!interacted && player && player.playVideo) {
+        player.unMute();
+        player.playVideo();
+        interacted = true;
+      }
+    }
+
+    // YouTube API 載入完成後建立播放器
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('ytplayer', {
+        events: {
+          'onReady': () => {
+            // 綁定多種互動事件來觸發播放
+            ['click', 'wheel', 'keydown'].forEach(evt =>
+              window.addEventListener(evt, tryPlay, { once: true })
+            );
+          }
+        }
+      });
+    }
+
+    // 載入 YouTube iframe API
+    const tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
+  </script>
+
+
+</body>

@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Ubuntu", sans-serif;
+    background-color: #010101;
+    color: white;
+    overflow-x: hidden;
+    font-size: 2.5vh;
+}
+
+#TopBar {
+    background-color: #3e85e4;
+    color: rgb(255, 255, 255);
+    position: fixed;
+    height: 8dvh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    padding-left: 1vw;
+    top: 0;
+}
+
+#TopBar a{
+  color: white;  
+  display: inline;
+  text-decoration: none;
+}
+
+#TopBar h2{
+    font-size: 1.5em;
+}
+
+/* */
+
+#TopBar div{
+    position: absolute;
+    right: 0;
+    margin-right: 5vw;
+    display: flex;
+    gap: 25px;
+}
