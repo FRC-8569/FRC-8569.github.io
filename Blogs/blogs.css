@@ -127,6 +127,13 @@ body {
   opacity: 80%;
 }
 
+#ImageTitle Date{
+  display: block;
+  color: #ffffff;
+  width: 100%;
+  opacity: 80%;
+}
+
 a{
   color: #ffdd1f;
   text-decoration: none;

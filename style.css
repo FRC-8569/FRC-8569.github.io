@@ -22,7 +22,7 @@
 }
 
 #MainTitleText {
-    position: fixed;
+    position: relative;
     top: 50%;
     left: 5%;
     transform: translateY(-50%);
