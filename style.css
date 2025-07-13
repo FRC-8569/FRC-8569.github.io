@@ -9,6 +9,39 @@
     background-blend-mode: normal;
 }
 
+#LoadingScreen{ 
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.8s ease;
+  z-index: 9999;
+}
+
+#LoadingScreen.visible{
+  opacity: 1;
+}
+
+#LoadingScreen.visible img {
+  width: 20vh;
+  z-index: 100;
+  opacity: 1;
+}
+
+#LoadingScreen.hidden {
+  opacity: 0;
+  pointer-events: none;
+  z-index: -10;
+}
+
+body{
+  opacity: 1;
+  transition: opacity 0.9s ease;
+}
+
 .BackgroundVideo {
     position: absolute;
     left: 0;
