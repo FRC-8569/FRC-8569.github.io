@@ -10,11 +10,74 @@
     <link rel="stylesheet" href="blogs.css" />
     <script src="Firstblog.js"></script>
     <style>
-        #ImageTitle{
-           background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.ytimg.com/vi/BVeFdbtuIpE/maxresdefault.jpg");
+        #ImageTitle {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.ytimg.com/vi/BVeFdbtuIpE/maxresdefault.jpg");
         }
-        #FieldItem{
-            
+
+        #FieldItem {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2vw;
+            max-width: 96%;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        #FieldItem item {
+            display: flex;
+            flex-direction: column;
+            height: 55vh;
+            width: 100%;
+            border: 4px solid #ffffff3e;
+            border-radius: 1vw;
+            align-items: center;
+            box-sizing: border-box;
+            line-height: 2.8vh;
+        }
+
+        #FieldItem img {
+            width: 20vh;
+        }
+
+        #FieldItem p {
+            text-align: center;
+        }
+
+        /* INFO: Breaking line*/
+        #Teaming {
+            height: 40vh;
+            border: 8px solid;
+            border-image: linear-gradient(to right, rgb(67, 186, 255) 50%, rgb(255, 83, 83) 50%) 1;
+            border-radius: 10px;
+            padding: 10px;
+
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            /* Left team, text, right team */
+            align-items: center;
+            gap: 20px;
+        }
+
+        team {
+            writing-mode: vertical-lr;
+            text-align: center;
+            font-size: 1.5rem;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            /* Spread items evenly vertically */
+            height: 100%;
+            overflow-y: auto;
+            height: calc(40vh/3);
+        }
+
+
+        #description {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
         }
     </style>
 </head>
@@ -44,20 +107,114 @@
         <p>記得往下滑</p>
     </div>
     <article>
-        <p id="Starting">這篇文章會告訴你FIRST的比賽規則與ReefScape的比賽解說</p>
+        <p style="text-align:  center;">這篇文章會告訴你FIRST的比賽規則與ReefScape的比賽解說</p>
         <br>
-        <img src="https://www.chiefdelphi.com/uploads/default/original/3X/9/a/9aa663f7d593c1dc8d365b3324691d746991f2d7.png" alt="" style="width: 80%; position: relative; left: 50%; transform: translateX(-50%);">
+        <img src="https://www.chiefdelphi.com/uploads/default/original/3X/9/a/9aa663f7d593c1dc8d365b3324691d746991f2d7.png"
+            alt="" style="width: 80%; position: relative; left: 50%; transform: translateX(-50%);">
         <p style="text-align: center;">⬆️大抄：場地的分佈與計分</p>
         <h2>物件介紹</h2>
         <hr>
         <div id="FieldItem">
-
+            <item>
+                <img src="static/FieldItems/Coral.png" alt="">
+                <p>
+                    學名：Coral<br>
+                    俗名：Tube,水管<br>
+                    材質：PVC超粗水管<br>
+                    用途：插到Reef上得分<br>
+                    取得方式：比賽一開始可以插一根在機器上，或是在比賽途中去CoralStation拿<br>
+                    稀有度：⭐️
+                </p>
+            </item>
+            <item>
+                <img src="static/FieldItems/Algae.png" alt="">
+                <p>
+                    學名：Algae<br>
+                    俗名：好像沒有<br>
+                    材質：橡膠充氣球<br>
+                    用途：機器自己丟到Net或是給Processor的Human player得分<br>
+                    取得方式：Reef上有<br>
+                    稀有度：⭐️⭐️
+                </p>
+            </item>
+            <item>
+                <img src="static/FieldItems/CoralStation.png" alt="">
+                <p>
+                    學名: CoralStation <br>
+                    用途：機器可以從這邊拿到Coral <br>
+                    稀有度：每邊各兩個 <br>
+                    注意事項：因為沒有聯盟線保護所以要小心別人偷襲搞後面
+                </p>
+            </item>
+            <item>
+                <img src="static/FieldItems/Reef.png" alt="">
+                <p>
+                    學名：Reef <br>
+                    長相：紫色一根根很抽象的東西 <br>
+                    用途：把Coral插上去得分 <br>
+                    稀有度：一邊一個 <br>
+                    注意事項：插之前記得對準不然會變成空包彈（咦？）
+                </p>
+            </item>
+            <item>
+                <img src="static/FieldItems/Barge.png" alt="" style="width: 100%;">
+                <p>
+                    學名：Barge <br>
+                    長相：就是場中間最靚的仔(???) <br>
+                    用途：上面有網子(net)可以讓機器或人把Alage放進去 <br>
+                    稀有度：一個場地一個 <br>
+                    注意事項：應該沒有
+                </p>
+            </item>
+            <item>
+                <img src="static/FieldItems/Cage.png" alt="" style="width: 4vw;">
+                <p>
+                    學名：Cage <br>
+                    長相：就是一個方型的籠子，分為淺(75cm)與深(8cm)吊籠(離地高度)<br>
+                    用途：機器可以掛上去<br>
+                    稀有度：每隊可以自己選要深的還是淺的<br>
+                    注意事項：比賽快結束的時候要算好時間才能吊上去<br>
+                </p>
+            </item>
+            <item>
+                <img src="static/FieldItems/Processor.png" alt="" style="width: 40vh;">
+                <p>
+                    學名：Processor <br>
+                    長相：就長那樣子是能說什麼 <br>
+                    用途：機器可以把Alage丟進去再給人丟到網子裡面(這個會有好處等一下提) <br>
+                    稀有度：在對方聯盟裡免有一個<br>
+                    注意事項：他沒有聯盟線小心被突襲
+                </p>
+            </item>
+            <item>
+                <img src="static/FieldItems/AllianceLine.png" alt="">
+                <p>學名：聯盟線 Alliance Line <br>
+                    長相：就是一條線<br>
+                    用途：當機器在這個範圍裡面的時候別對的機器幹過來就算犯規<br>
+                    稀有度：Barge跟Reef各有一圈<br>
+                    注意事項：當別人在裡面的時候就不要耍白痴幹過去<br>
+                </p>
+            </item>
         </div>
 
         <h2>比賽的分組</h2>
         <hr>
-        一場比賽中會有藍色與紅色兩個聯盟，每個聯盟裡面會有三支隊伍，每支隊伍有各自對應的操控台DriverStation，一個DriverStation可以站3個人：2個操控手Driver與1個教練Coach，Driver是可以操控機器的(廢話)，會針對現實狀況應對機器人的行為，Coach可以輔助操控手判斷接下來要幹嘛(通常是熟悉規則的人)，但不能碰操控桿。
-        <br><br>
-        除了DriverStation以外，Processor(放Alage)與CoralStation(機器會拿Coral)也會由3支隊伍各派一個人類玩家Human Player與機器互動(給Coral或是投球到網子(Net裡面))
+        <div id="Teaming">
+            <team style="rotate: 180deg;">1690 1678 8569</team>
+
+
+            <div id="description">
+                <p>一場比賽有兩個聯盟：紅/藍<br>
+                    一個聯盟有三隊<br>
+                    每隊最多會有4人上場: <br>
+                    2 Driver: 操控的人<br>
+                    1 Coach: 輔助Driver的判斷，不能操控<br>
+                    1 Technician: 機器的臨場Debug, 搬機器</p>
+            </div>
+
+            <team>8964  114514  1323</team>
+        </div>
+
+
     </article>
 </body>
