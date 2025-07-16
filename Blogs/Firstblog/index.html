@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>FRC 8569 | 創刊號</title>
+  <meta name="author" content="Justmore5mins from FRC8569" />
+  <meta name="description" content="FRC8569的官方隊網" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/frame.css" />
+  <link rel="stylesheet" href="blogs.css" />
+  <script>
+    const original = "The ocean is more than what you can see on the horizon. Beneath the surface lies our planet’s most complex ecosystems, full of life and potential for exploration and learning. And like in our global robotics community, each ocean inhabitant has a role to play in building a thriving environment."
+    const translated = "海洋遠不止地平線上可見的景象。在海面之下，蘊藏著地球上最複雜的生態系統，生氣勃勃，蘊藏著探索與學習的潛能。如同全球機器人社群一樣，每個海洋生物都在建構繁榮的海洋環境中扮演著各自的角色。"
+    var isOriginal = false;
+
+
+    function toggleTranslate() {
+      document.getElementById("Dive").textContent = isOriginal ? translated : original;
+      isOriginal = !isOriginal;
+    }
+
+
+    window.onload = function () {
+      toggleTranslate()
+    }
+  </script>
+  <style>
+    #ImageTitle {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Blogs/static/EverythingStart.png");
+    }
+  </style>
+</head>
+
+<body>
+  <div id="TopBar">
+    <img src="/static/TeamIconWhite.png" alt="FRC8569"
+      style="width: 10vh;background-color: #3e85e4;border: 1px solid #3e85e4; left: 2px;">
+    <h1>FRC8569 | 有趣的文章</h1>
+    <div style="right: 0px; align-items: center;">
+      <a href="/Blogs/">
+        <img src="/Blogs/static/Left.svg" alt="" style="height: 6dvh;">
+      </a>
+      <a href="/">
+        <img src="/Blogs/static/Home.svg" alt="" style="height: 5dvh;">
+      </a>
+    </div>
+  </div>
+  <div id="ImageTitle">
+    <div id="text">
+      <h1>創刊號</h1>
+      <h2>一切開始的地方</h2>
+      <Author>Author: Justmore5mins</Author>
+      <date>Date: 7.12.25</date>
+    </div>
+
+    <p>記得往下滑</p>
+  </div>
+  <article>
+    <p id="Starting">
+      這是在FRC8569官網中的第一篇文章，聽起來還不錯吧。在這裡會使用類似網路文章的方式來記錄我們的日常，或是教學甚至是工商宣傳(如果有的話)，第一篇也想不到感人的話，所以就來彌補首頁沒說完的部分吧。
+      <br><br>
+      FIRST(For Inspiration and Recognition of Science and Technology)是由Dean
+      Kamen在1989年創立的非營利組織，除了啟發青少年對科學與科技的興趣以外，還有重視合作與高尚的專業精神。這些都是FIRST關注的事情。
+      <br><br>
+      FIRST到目前為止有三大主要的世界競賽：FRC(FIRST Robotics Competition)、FTC(FIRST Tech Challenge)與FLL(FIRST Lego League)。
+    </p>
+    <h2>
+      FRC(FIRST Robotics Competition)
+    </h2>
+    <hr>
+    <p>
+      FRC是針對高中生(14~18歲)設計的比賽，在每年的一月上旬公布題目後，用3~4個月的時間製作出機器人並到比賽場上如2025賽季的新北市地區賽(<a
+        href="https://www.thebluealliance.com/event/2025ntwc">NTWC</a>)或是國外的賽區如<a
+        href="https://www.thebluealliance.com/event/2025caav">航空谷</a>，並於四月中在休士頓舉行世界賽(FIRST
+      Championship)，來自世界中頂尖的600餘支隊伍會在此地進行最終的較量。除了地區賽\區域賽獲得冠軍的聯盟之外，獲得擇優制獎項如FIRST Impact Award或是Rookie All
+      Star也有機會獲邀進入會場輸贏。
+      <br><br>
+
+      這次賽季(2025)的大主題是FIRST Dive，其中的內涵是這樣的
+      <button
+        style="background-color: transparent; border: none; width: 60%; position: relative;;left: 50%; transform: translateX(-50%);"
+        onclick="toggleTranslate()">
+        <blockquote id="Dive">
+        </blockquote>
+      </button>
+      <br>
+      根據這個準則發展出來的題目分別有FRC的ReefScape, FTC的Into the Deep與FLL的Submerged
+    </p>
+    <h2>FRC計分方式</h2>
+    <hr>
+    <img src="https://www.chiefdelphi.com/uploads/default/7235864d537b0162444f64c2427554d1d83df0ff" alt=""
+      style=" position: relative; left: 50%; transform: translateX(-50%); width: 50%;">
+    <p style="text-align: center;">⬆️場地的長相</p>
+    <p>
+      一場比賽中會有兩個聯盟，每個聯盟三隊總共六支隊伍構成。比賽依照時間可以分為兩階段，分別為自動模式(Auto)與手動模式(TeleOp)，自動模式中隊伍將要做的內容(例如得分)預先寫到機器的程式裡面，在這15秒的時間裡面可以執行所有的動作如拿/放Coral/投Alage等操作，這個階段相比於人類的視覺修正來說，對於機器走直線的精準度(關於這個問題我們之後會再寫一篇文章來介紹(有種老高的味道))與機器的旋轉精度(多為程式控制項)要求相當高，於是在這段時間內的加分也會相對多。接下來的2分15秒是手動模式，Driver可以遙控操控機器人繼續得分，透過人類的操控可以讓機器更容易發揮最完整的效能。(完整的規則之後也會花一篇文章來講(又來))
+    </p>
+    <h2>那我們在幹嘛</h2>
+    <hr>
+    <p>
+      在公布題目過後，我們會統整現有資源與人力，將工作分配到適合的人身上，例如機構組就負責主導機構設計；程式組與電控組在早期還沒有什麼事情所以就先跟機構組一起想機構或是製作場地。約一個月第一版機器快做出來之後，配電組會開始根據機構的配置來在合理的位置走線；程式組會根據每年的API不一樣而要去改動程式碼；公關組則接手場地製作工作與基本的宣傳。
+      <br><br>
+      在程式測試與參數調整過後，就會是機構的穩定性驗證與操控手練習的時候，這時機構組雖然不會像剛開始這麼忙碌，但也有一點工作負載。除了要看機器在使用過後有沒有哪些地方壞掉或是需要改進的，而程式組則是要與操控手協調操控的設計方式，讓他們可以更容易的操控機器人。
+      <br><br>
+      在長時間的迭代過後，到了比賽時間(通常是日程的Week
+      5/6，這樣對段考的影響最小)，機器會被調整到最佳的狀態，並將其拆解(總不能整台上飛機吧)後到當地再組裝、測試與除錯。直到比賽間，每個人都要繃緊神經，機構組要看東西有沒有偏掉、程式組要確認每個物件都正常的溝通、電控組要看電有沒有接好、公關組要負責和其他隊伍交換資訊等，非常繁忙。
+      <br><br>
+      比完賽之後，高二生高三的長姊除了交接以外，還有要最後的幫忙(最多到暑假)，到開學後就是原本的高一要帶新生加入、熟悉、並投入熱情於這個活動中。
+    </p>
+    <h2>參加這個活動對我有什麼好處</h2>
+    <hr>
+    <p>
+      除了最基本的學習歷程外，根據不同的組別會學到不同的東西
+      <br><br>
+      在機構組中除了可以學到3D列印、CNC加工、基礎的力學與工業知識，將工件做準的態度，認知到目前有的優勢與劣勢。
+      <br><br>
+      程式組除了基本的針對機構的程式設計以外，還有與AI相關的視覺辨識應用，這些在未來都會是相當熱門的趨勢。
+      <br><br>
+      電控組可以學到怎麼接線
+      <br><br>
+      公關組可以練習與人打交道，廣結人脈，對於未來也有很大的幫助
+    </p>
+    <h2>參加這個有什麼門檻</h2>
+    <hr>
+    <p>
+      基本上對於機構、程式設計或是場地製作等有興趣都可以來看看，有些人可能會擔心因為是國外的比賽，所以對英文有一定的要求，不過在這邊對於國外的資料來源，長姊都會跟著一起看來學習，英文也可以在這之間提升，到國外也會跟外地的同學、裁判溝通，也可以練習英文的口說與應用。
+    </p>
+  </article>
+  <p id="ref">
+    References: <br>
+    <a href="https://www.firstinspires.org/about/history">FRC的歷史</a><br>
+    <a href="https://en.wikipedia.org/wiki/For_Inspiration_and_Recognition_of_Science_and_Technology">還有維基百科</a><br>
+    <a href="https://en.wikipedia.org/wiki/Reefscape">珊瑚逃脫(有夠爛的翻譯(喂))</a><br>
+    <a href="https://firstroboticsbc.org/2024/04/23/new-season-theme-announced-first-dive/">Reefscape offical
+      announce</a><br>
+  </p>
+  <p style=" color: lightgray; font-size: 2.5vh; position: relative; bottom: -6dvh; text-align: center;">&copy; 2025
+    FRC8569. All rights reserved.</p>
+</body>

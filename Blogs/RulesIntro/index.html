@@ -7,8 +7,7 @@
     <meta name="description" content="FRC8569的官方隊網" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/frame.css" />
-    <link rel="stylesheet" href="blogs.css" />
-    <script src="Firstblog.js"></script>
+    <link rel="stylesheet" href="/Blogs/blogs.css" />
     <style>
         #ImageTitle {
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.ytimg.com/vi/BVeFdbtuIpE/maxresdefault.jpg");
@@ -58,18 +57,12 @@
             gap: 20px;
         }
 
-        team {
-            writing-mode: vertical-lr;
-            text-align: center;
-            font-size: 1.5rem;
-
+        #team {
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
-            /* Spread items evenly vertically */
             height: 100%;
-            overflow-y: auto;
-            height: calc(40vh/3);
+            writing-mode: sideways-rl;
         }
 
 
@@ -89,10 +82,10 @@
         <h1>FRC8569 | 有趣的文章</h1>
         <div style="right: 0px; align-items: center;">
             <a href="/Blogs/">
-                <img src="static/Left.svg" alt="" style="height: 6dvh;">
+                <img src="/Blogs/static/Left.svg" alt="" style="height: 6dvh;">
             </a>
             <a href="/">
-                <img src="static/Home.svg" alt="" style="height: 5dvh;">
+                <img src="/Blogs/static/Home.svg" alt="" style="height: 5dvh;">
             </a>
         </div>
     </div>
@@ -116,7 +109,7 @@
         <hr>
         <div id="FieldItem">
             <item>
-                <img src="static/FieldItems/Coral.png" alt="">
+                <img src="FieldItems/Coral.png" alt="">
                 <p>
                     學名：Coral<br>
                     俗名：Tube,水管<br>
@@ -127,7 +120,7 @@
                 </p>
             </item>
             <item>
-                <img src="static/FieldItems/Algae.png" alt="">
+                <img src="FieldItems/Algae.png" alt="">
                 <p>
                     學名：Algae<br>
                     俗名：好像沒有<br>
@@ -138,7 +131,7 @@
                 </p>
             </item>
             <item>
-                <img src="static/FieldItems/CoralStation.png" alt="">
+                <img src="FieldItems/CoralStation.png" alt="">
                 <p>
                     學名: CoralStation <br>
                     用途：機器可以從這邊拿到Coral <br>
@@ -147,7 +140,7 @@
                 </p>
             </item>
             <item>
-                <img src="static/FieldItems/Reef.png" alt="">
+                <img src="FieldItems/Reef.png" alt="">
                 <p>
                     學名：Reef <br>
                     長相：紫色一根根很抽象的東西 <br>
@@ -157,7 +150,7 @@
                 </p>
             </item>
             <item>
-                <img src="static/FieldItems/Barge.png" alt="" style="width: 100%;">
+                <img src="FieldItems/Barge.png" alt="" style="width: 100%;">
                 <p>
                     學名：Barge <br>
                     長相：就是場中間最靚的仔(???) <br>
@@ -167,7 +160,7 @@
                 </p>
             </item>
             <item>
-                <img src="static/FieldItems/Cage.png" alt="" style="width: 4vw;">
+                <img src="FieldItems/Cage.png" alt="" style="width: 4vw;">
                 <p>
                     學名：Cage <br>
                     長相：就是一個方型的籠子，分為淺(75cm)與深(8cm)吊籠(離地高度)<br>
@@ -177,7 +170,7 @@
                 </p>
             </item>
             <item>
-                <img src="static/FieldItems/Processor.png" alt="" style="width: 40vh;">
+                <img src="FieldItems/Processor.png" alt="" style="width: 40vh;">
                 <p>
                     學名：Processor <br>
                     長相：就長那樣子是能說什麼 <br>
@@ -187,7 +180,7 @@
                 </p>
             </item>
             <item>
-                <img src="static/FieldItems/AllianceLine.png" alt="">
+                <img src="FieldItems/AllianceLine.png" alt="">
                 <p>學名：聯盟線 Alliance Line <br>
                     長相：就是一條線<br>
                     用途：當機器在這個範圍裡面的時候別對的機器幹過來就算犯規<br>
@@ -200,7 +193,11 @@
         <h2>比賽的分組</h2>
         <hr>
         <div id="Teaming">
-            <team style="rotate: 180deg;">1690 1678 8569</team>
+            <div id="team" style="transform: rotate(180deg);">
+                <p>2073</p>
+                <p>4414</p>
+                <p>1690</p>
+            </div>
 
 
             <div id="description">
@@ -212,9 +209,75 @@
                     1 Technician: 機器的臨場Debug, 搬機器</p>
             </div>
 
-            <team>8964  114514  1323</team>
+            <div id="team">
+                <p>2910</p>
+                <p>1323</p>
+                <p>4272</p>
+            </div>
+        </div>
+        <p>除了上述那些人以外，每個聯盟還會有3個Human Player(每隊各1個)站在CoralStation與Processor的地方投Coral或是Algae。
+            <p style="text-align: center;">Note: Technician不會在DriverStation裡面</p>
+        </p>
+
+        <h2>計分方式</h2>
+        <hr>
+        積分種類有分一般的積分(Points)與排位積分(Ranking Points, RP)，一般積分就是用於判斷輸贏，RP是用於排段位用的，在Playoff的時候也會參考
+        <div id="FieldItem">
+            <item>
+                <img src="FieldItems/ReefScoring.png" alt="" style="width: 20vw">
+                <p>
+                    Auto:L1: 3, L2: 4, L3: 6, L4: 7分<br>
+                    TeleOp:L1: 2, L2: 3, L3: 4, L4: 5分<br>
+                    RP: 所有Level插5 Coral <br>
+                    機率事件：如果有Co-op Points可以少一個Level
+                </p>
+            </item>
+            <item>
+                <img src="FieldItems/Barge.png" alt="" style="width: 20vw;">
+                <p>
+                    Park(最後停進去): 2分 <br>
+                    高(shallow) Cage: 6分<br>
+                    低(Deep) Cage: 12分 <br>
+                    RP: 在這邊得到14分(1 Deep + 1 Park)
+                </p>
+            </item>
+            <item>
+                <img src="FieldItems/Processor.png" alt="" style="width: 20vw;">
+                <p>
+                    Processor: 6分 <br>
+                    直接丟進去: 4分 <br>
+                    機率事件：兩個Processor各有兩顆球可得1 Co-op Point(對Reef有利益)         
+                </p>
+            </item>
+            <item>
+                <img src="FieldItems/Auto.png" alt="" style="width: 20vw;">
+                <p>
+                    離開聯盟線(Leave): 3分 <br>
+                    RP: 所有機器Leave而且得分1 Coral
+                </p>
+            </item>
+            <item>
+                <img src="FieldItems/MatchResult.png" alt="" style="width: 20vw;">
+                <p>
+                    比賽結果： <br>
+                    輸掉沒有RP <br>
+                    平手兩方各有1 RP <br>
+                    贏的話有 3 RP <br>
+                </p>
+            </item>
+
+            <item>
+                <img src="FieldItems/Foul.png" alt="" style="width: 20vw;">
+                <p>
+                    小的錯誤(Minor foul): 對方+2分<br>
+                    大的錯誤(Major foul): 對方+6分
+                </p>
+            </item>
         </div>
 
-
+        <p>以上就是這個賽季簡單的規則解說，如果想要了解完整歸則，可以到<a href="https://www.frcmanual.com/2025/introduction">Rules Fanmade</a>或是<a href="https://firstfrc.blob.core.windows.net/frc2025/Manual/2025GameManual.pdf">官方規則</a>查看完整規則</p>
     </article>
+    <p style=" color: lightgray; font-size: 2.5vh; position: relative; bottom: -6dvh; text-align: center;">
+    免責聲明：本規則僅供參考用，完整歸則請見<a href="https://firstfrc.blob.core.windows.net/frc2025/Manual/2025GameManual.pdf">這裡</a><br>
+        &copy; 2025 FRC8569. All rights reserved.</p>
 </body>

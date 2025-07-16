@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&display=swap');
+
 body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Chocolate Classical Sans", sans-serif;
     background-color: #010101;
     color: white;
     overflow-x: hidden;
